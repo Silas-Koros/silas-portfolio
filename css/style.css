@@ -1151,3 +1151,113 @@ footer {
     }
 
 }
+
+/* =========================
+   NAVIGATION POLISH
+========================= */
+
+.nav-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    margin: 5px auto;
+
+    background: #ffffff;
+
+    transition: 0.25s;
+}
+
+
+/* Prevent sticky header from covering section headings */
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+        right: 0;
+
+        padding: 20px 6% 30px;
+
+        background: #081725;
+
+        border-top: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    nav ul.nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+
+    /* Hamburger → X */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+}

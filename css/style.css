@@ -906,3 +906,248 @@ section:not(.hero) > h2 {
     }
 
 }
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-section,
+.community-section,
+.contact-section {
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.education-card {
+    background: #0d2032;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    padding: 35px;
+
+    display: flex;
+    gap: 28px;
+
+    transition: 0.25s;
+}
+
+.education-card:hover {
+    border-color: rgba(22,135,255,0.5);
+    transform: translateY(-3px);
+}
+
+.education-icon {
+    font-size: 2.5rem;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.education-school {
+    color: #1687ff;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.education-header h3 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.education-minor {
+    color: #c1ced9;
+}
+
+.education-date {
+    color: #8fa3b5;
+    white-space: nowrap;
+}
+
+.education-description {
+    color: #aebdca;
+    max-width: 800px;
+
+    margin: 25px 0;
+}
+
+.education-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.education-tags span {
+    color: #9acaff;
+
+    background: rgba(22,135,255,0.08);
+    border: 1px solid rgba(22,135,255,0.2);
+
+    padding: 5px 11px;
+    border-radius: 20px;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.community-card {
+    background: #0d2032;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    padding: 28px;
+
+    display: flex;
+    gap: 20px;
+
+    transition: 0.25s;
+}
+
+.community-card:hover {
+    border-color: rgba(22,135,255,0.45);
+    transform: translateY(-4px);
+}
+
+.community-icon {
+    font-size: 1.8rem;
+}
+
+.community-card h3 {
+    font-size: 1.15rem;
+}
+
+.community-org {
+    color: #1687ff;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    margin: 3px 0 12px;
+}
+
+.community-card div > p:last-child {
+    color: #aebdca;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+.contact-container .section-label {
+    margin-bottom: 10px;
+}
+
+.contact-container h2 {
+    color: #ffffff !important;
+
+    font-size: clamp(2.4rem, 5vw, 4rem) !important;
+
+    margin-bottom: 20px !important;
+}
+
+.contact-description {
+    color: #aebdca;
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1.05rem;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: #06121e;
+}
+
+.footer-content {
+    max-width: 1400px;
+
+    margin: auto;
+    padding: 35px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    font-size: 1.1rem;
+}
+
+.footer-content div p,
+.footer-copy {
+    color: #778b9d;
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   EDUCATION / COMMUNITY MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

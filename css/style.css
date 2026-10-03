@@ -738,3 +738,171 @@ section:not(.hero) > h2 {
     }
 
 }
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section,
+.certifications-section {
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    background: #0d2032;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    padding: 28px;
+
+    transition: 0.25s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(22,135,255,0.5);
+}
+
+.skill-icon {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-list span {
+    color: #b8c8d6;
+
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.cert-card {
+    background: #0d2032;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    padding: 28px;
+
+    display: flex;
+    gap: 20px;
+
+    transition: 0.25s;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(22,135,255,0.5);
+}
+
+.primary-cert {
+    border-color: rgba(22,135,255,0.35);
+}
+
+.cert-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.cert-provider {
+    color: #1687ff;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.cert-content h3 {
+    margin: 5px 0 12px;
+    font-size: 1.2rem;
+}
+
+.cert-content p {
+    color: #aebdca;
+    font-size: 0.9rem;
+
+    margin-bottom: 18px;
+}
+
+.cert-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cert-meta span {
+    color: #9acaff;
+
+    background: rgba(22,135,255,0.08);
+    border: 1px solid rgba(22,135,255,0.18);
+
+    border-radius: 20px;
+
+    padding: 4px 10px;
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================
+   SKILLS/CERT MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .skills-grid,
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cert-card {
+        flex-direction: column;
+    }
+
+}
